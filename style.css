@@ -44,6 +44,21 @@ body {
     margin: 5px 0;
 }
 
+.item_o img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.item_o h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.item_o p {
+    margin: 5px 0;
+}
+
 .in-stock {
     color: green;
     font-weight: bold;
