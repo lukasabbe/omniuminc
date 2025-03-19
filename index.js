@@ -46,7 +46,7 @@ app.put("/item/:id", (req, res) => {
         res.status(400).json({ error: "Invalid input" });
         return;
     }
-    db.run("UPDATE items SET name = ?, price = ?, quantity = ?, stack_size = ?, WHERE id = ?", [name, price, quantity, stack_size, id], (err) => {
+    db.run("UPDATE items SET name = ?, price = ?, quantity = ?, stack_size = ? WHERE id = ?", [name, price, quantity, stack_size, id], (err) => {
         if (err) {
             res.status(500).json({ error: err.message });
             return;
