@@ -39,7 +39,7 @@ app.post("/item", (req, res) => {
 });
 
 app.put("/item/:id", (req, res) => {
-    const { name, price, quantity, token } = req.body;
+    const { name, price, quantity, token , stack_size} = req.body;
     const { id } = req.params;
 
     if (!name || !price || !quantity || token !== process.env.TOKEN) {
