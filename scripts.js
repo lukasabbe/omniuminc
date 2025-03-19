@@ -6,14 +6,13 @@ window.onload = async () => {
     const mc_itemsJson = await mc_items.json();
     itemsJson.forEach(item => {
         const itemElement = document.createElement("div");
-        itemElement.classList.add("item");
+        itemElement.classList.add(item.quantity == 0 ? "item_o" : "item");
         itemElement.innerHTML = `
             <img src="${mc_itemsJson.find(t => t.namespacedId == item.id).image}" alt="Product Image">
             <h3>${item.name}</h3>
-            <p>${item.price} dia<br>${item.price*10} quid</p>
-            <p>${item.stack_size} stack size</p>
+            <p>${item.price} dia | 20 quid / ${item.stack_size} st</p>
 
-            <p class="in-stock">In Stock</p>
+            <p class="${item.quantity == 0 ? "out-of-stock" : "in-stock"}">${item.quantity == 0 ? "Out of stock" : "In stock"}</p>
         `;
         container.appendChild(itemElement);
     });

@@ -21,6 +21,13 @@ body {
     text-align: center;
     background-color: #63A088;
 }
+.item_o {
+    border: 4px solid #e20c0c;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: #63A088;
+}
 
 .item img {
     max-width: 100%;
