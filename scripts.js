@@ -1,5 +1,5 @@
 window.onload = async () => {
-    const items = await fetch("http://localhost:3000/items");
+    const items = await fetch("https://omniumapi.lukasabbe.com/items");
     const itemsJson = await items.json();
     const container = document.getElementById("product-grid");
     const mc_items = await fetch("https://minecraft-api.vercel.app/api/items");
